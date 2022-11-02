@@ -1,12 +1,28 @@
 :root {
-    --main-color: #212121;
-    --main-text-color:#757575;
-    --secondary-color:#FFFFFF;
+/*fonts*/
+--main-font:"Roboto", Tahoma, sans-serif;
+--secondary-font:"Raleway", Tahoma, sans-serif;
+
+/* Text color*/
+--main-text-color: #212121;
+--secondary-text-color: #757575;
+--ligth-text-color: #FFFFFF;
+--accent-text-color:#2196f3;
+
+/* Background colors */
+--main-bg-color: #2F303A;
+--accent-bg-color:#2196F3;
+--button-bg-color:#F5F4FA;
+
+/* Others */
+--border-color:#FFFFFF;
+--nav-link-color:#000000;
 
 }
 
 body {
-    font-family: "Roboto", Tahoma, sans-serif;
+    font-family: var(--main-font);
+    color: var(--main-text-color);
 }
 .list {
     list-style: none;
@@ -17,15 +33,15 @@ text-decoration: none;
 /*---- HEADER----*/
 .logo {
 
-    font-family: 'Raleway';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 26px;
-        line-height: calc(31 / 26);
+    font-family: var(--secondary-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: calc(31 / 26);
     
-        letter-spacing: 0.03em;
+    letter-spacing: 0.03em;
     
-        color: #2196F3;
+    color: var(--accent-text-color);
 }
 
 .nav-list {}
@@ -33,41 +49,44 @@ text-decoration: none;
 .nav-item {}
 
 .nav-link {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.02em;
-        color: var(--main-title-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    color: currentColor;
 }
+
 .nav-link:hover, .header-link:hover, .nav-link:focus, .header-link:focus {
-    color: #2196F3;
+    color: var(--accent-text-color);
 }
+
 .logo-header {
-    color: #000000;
+    color: var(--nav-link-color);
 }
+
 .header-link {
     font-weight: 500;
     font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
-    color: #000000;
+    color: var(--secondary-text-color);
 }
 
 /*----HERO----*/
 .hero {
-    background-color: #2F303A;
+    background-color: var(--main-bg-color);
 }
 .hero-title {
-font-weight: 900;
+    font-weight: 900;
     font-size: 44px;
     line-height: calc(60 / 44);
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--ligth-text-color);
 }
 .hero-btn {
-font-family: inherit;
+    font-family: inherit;
    
     font-weight: 700;
     font-size: 16px;
@@ -76,12 +95,12 @@ font-family: inherit;
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-cursor: pointer;
-    color: #FFFFFF;
-    background-color: #2196F3;
+    cursor: pointer;
+    color: var(--ligth-text-color);
+    background-color: var(--accent-bg-color);
 }
 .hero-btn:hover, .hero-btn:focus {
-    border-color:#FFFFFF;
+    border-color:var(--border-color);
 }
 
 /*----BENEFITS----*/
@@ -93,32 +112,27 @@ cursor: pointer;
 .benefits-list {}
 
 .benefits-subtitle {
-font-weight: 700;
     font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #212121;
 }
 
 .benefits-text {
-font-weight: 400;
     font-size: 14px;
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
-    color: #757575;
+    color: var(--secondary-text-color);
 }
 
 /*----ACTIVITY----*/
 .activity {}
 
 .activity-title {
-font-weight: 700;
     font-size: 36px;
     line-height: calc(42 / 36);
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
 }
 
 
@@ -130,12 +144,10 @@ font-weight: 700;
 .team {}
 
 .team-title {
-font-weight: 700;
     font-size: 36px;
     line-height: calc (42 / 36);
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
 }
 
 
@@ -145,84 +157,79 @@ font-weight: 700;
 
 .team-subtitle {
     font-weight: 500;
-        font-size: 16px;
-        line-height: calc(19 / 16);
-        text-align: center;
-        letter-spacing: 0.03em;
-        color: #212121;
+    
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    text-align: center;
+    letter-spacing: 0.03em;
 }
 
 .team-text {
-    font-weight: 400;
-        font-size: 16px;
-        line-height: calc(19 / 16);
-        text-align: center;
-        letter-spacing: 0.03em;
-        color: #757575;
+    line-height: calc(19 / 16);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color);
 }
 
 /*----FOOTER----*/
 .footer {
-    background-color: #2F303A;
+    background-color: var(--main-bg-color);
 }
 .logo-footer {
-    color: #FFFFFF;
+    color: var(--ligth-text-color);
 }
 
 .footer-link-adress {
-font-weight: 400;
+    font-weight: 400;
     font-size: 14px;
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
-    color: #FFFFFF;
+    color: var(--ligth-text-color);
 }
 
 .footer-link {
     font-weight: 400;
-        font-size: 14px;
-        line-height: calc(24 / 14);
-        letter-spacing: 0.03em;
-        color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
 }
 .footer-link:hover,
 .footer-link-adress:hover,
 .footer-link:focus,
 .footer-link-adress:focus {
-    color: #2196F3;
+    color: var(--accent-text-color);
 }
 
 /*----PORTFOLIO----*/
 .portfolio-btn {
-font-family: inherit;
-font-weight: 500;
+    font-family: inherit;
+    font-weight: 500;
     font-size: 16px;
     line-height: calc(26 / 16);
     text-align: center;
+    cursor: pointer;
     letter-spacing: 0.03em;
-    color: #212121;
-    background-color: #F5F4FA;
-border-style: none;
+    color: currentColor;
+    background-color: var(--button-bg-color);
+    border-style: none;
 }
 
 .portfolio-btn:hover,
 .portfolio-btn:focus {
-    color: #FFFFFF;
-    background-color: #2196F3;
+    color: var(--ligth-text-color);
+    background-color: var(--accent-bg-color);
 }
 .portfolio-subtitle {
-font-weight: 700;
     font-size: 18px;
     line-height: calc(36 / 18);
     letter-spacing: 0.06em;
-
-    color: #212121;
+    color: var(--main-text-color);
 }
 .portfolio-text {
-font-weight: 400;
-    font-size: 16px;
     line-height: calc(30 / 16);
     letter-spacing: 0.03em;
-    color: #757575;
+    color: var(--secondary-text-color);
 
 }
 .visually-hidden {
